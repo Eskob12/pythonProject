@@ -125,6 +125,7 @@ def spin(balance):
 
     return winnings - total_bet
 
+
 def main():
     balance = deposit()
     while True:
@@ -133,6 +134,9 @@ def main():
         if answer == "q":
             break
         balance += spin(balance)
+        if balance == 0:
+            break
+
 
 
 main()
